@@ -1,8 +1,11 @@
 # Introduction to Elasticsearch
 
-[https://github.com/worthington10TW/ElasticsearchBrownBag](https://github.com/worthington10TW/ElasticsearchBrownBag)
-Matthew Worthington
-Developer @ ThoughtWorks
+
+## Matthew Worthington
+## Developer @ ThoughtWorks
+
+github.com
+/worthington10TW/ElasticsearchBrownBag
 
 Note:
 
@@ -42,6 +45,13 @@ Note:
 
 ---
 
+# Our example data set
+
+ThoughtWorks university 
+Trainers and students
+
+---
+
 # What is Elasticsearch?
 
 Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease.
@@ -75,7 +85,7 @@ Retrieves data
 - Shards
 - Clusters
 
-*https://www.elastic.co/*
+*www.elastic.co/*
 *guide/en/elasticsearch/*
 *reference/current/glossary.html*
 
@@ -85,25 +95,19 @@ Retrieves data
 
 Stored as JSON
 Contains fields (Key value pairs)
-They have a `type` and an `id`
+They have a `version`, `type` and `id`
 Original document is stored in the `_source` field
 Stored in an `index`
+
+Note:
+Types are now not used, a document is linked to a single type
+And can be reindexed and mapped
 
 ---
 
 # Document
 
-![](https://i.imgur.com/zXmMn68.png)
-
----
-
-# Type
-
-A noun
-Represent the `type` of the document
-e.g. Property, Person, Fruit
-
-Or using dynamic mapping with a type of `_doc`
+![](https://i.imgur.com/7AyGFvn.png =400x)
 
 ---
 
@@ -149,7 +153,7 @@ What about locations?
 
 # Document from ES
 
-![](https://i.imgur.com/2JthbTq.png)
+![](https://i.imgur.com/RuhgV7x.png =400x)
 
 ---
 
@@ -162,7 +166,7 @@ The logical name which maps to one or more `shards`
 
 # Indexes
 
-![](https://i.imgur.com/V0i11Wl.png)
+![](https://i.imgur.com/e1tMW0L.png =400x)
 
 ---
 
@@ -175,19 +179,19 @@ Group many indexes
 
 # Index alias example
 
-In a school
+At ThoughtWorks University
 
-We may have an index of all the **teachers**
-We may have another index of all the **pupils**
+We have **trainers**
+We have **students**
 
-We may want to search across **people**
+We want to search across **people**
 An index alias of people containing teachers and pupils to the rescue! 
 
 ---
 
 # Index alias
 
-![](https://i.imgur.com/GDQpWnm.png)
+![](https://i.imgur.com/nvd0VF9.png =400x)
 
 ---
 
@@ -221,7 +225,8 @@ Machine Learning nodes
 Contains indexes
 Data nodes host the shards
 
-![](https://i.imgur.com/a9VLeMD.png)
+![](https://i.imgur.com/8DZeysP.png =400x)
+
 
 ---
 
@@ -231,6 +236,7 @@ Single lucene index
 Automatically managed by Elasticsearch
 We can configure primary and replica count
 Placed in random nodes across the cluster
+Indexes are split into 5 shards by default
 The rest should just work itself out
 
 ---
@@ -249,6 +255,11 @@ Used when primary fails
 Never on the same node as the primary shard
 Increased search performance
 
+---
+
+# Shards
+
+![Shards](https://i.imgur.com/6vClMak.png =600x)
 
 ---
 
@@ -256,13 +267,24 @@ Increased search performance
 
 One of more nodes
 Master node controllers cluster management
-
-
-One node in the cluster is the “master” node, which is in charge of cluster-wide management and configurations actions
+Nodes all share the same cluster name
 
 ---
 
-![](https://i.imgur.com/14UspX3.png)
+# Cluster
 
+![Cluster](https://i.imgur.com/oaD8B20.png =600x)
 
 ---
+
+# Time to play with Elasticsearch!
+
+```
+git clone github.com/worthington10TW/ElasticsearchBrownBag
+```
+
+```
+docker-compose up
+```
+
+
