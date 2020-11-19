@@ -26,8 +26,6 @@ Note:
 
 ---
 
-## This session
-
 - Overview of Elasticsearch
 - Useful terminology
 - How to get up and running
