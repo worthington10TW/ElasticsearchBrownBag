@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v2
+
+      - name: HelloWorld
+        id: hello
+        run: ls
