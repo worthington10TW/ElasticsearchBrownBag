@@ -73,7 +73,7 @@ Retrieves data
 
 [home (port 9200)](http://localhost:9200)
 
-![](./images/elasticsearch.png)
+![](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/elasticsearch.png)
 
 ---
 
@@ -107,7 +107,7 @@ And can be reindexed and mapped
 
 # Document
 
-![](./images/json.png =400x)
+![](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/json.png =400x)
 
 ---
 
@@ -153,7 +153,7 @@ What about locations?
 
 # Document from ES
 
-![](./images/document.png =400x)
+![](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/document.png =400x)
 
 ---
 
@@ -166,7 +166,7 @@ The logical name which maps to one or more `shards`
 
 # Indexes
 
-![](./images/index.png =400x)
+![](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index.png =400x)
 
 ---
 
@@ -191,7 +191,7 @@ An index alias of people containing teachers and pupils to the rescue!
 
 # Index alias
 
-![](./images/index-alias.png =400x)
+![](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index-alias.png =400x)
 
 ---
 
@@ -225,7 +225,7 @@ Machine Learning nodes
 Contains indexes
 Data nodes host the shards
 
-![](./images/nodes.png =400x)
+![](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/nodes.png =400x)
 
 
 ---
@@ -259,7 +259,7 @@ Increased search performance
 
 # Shards
 
-![Shards](./images/shards.png =600x)
+![Shards](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/shards.png =600x)
 
 ---
 
@@ -273,7 +273,7 @@ Nodes all share the same cluster name
 
 # Cluster
 
-![Cluster](./images/cluster.png =600x)
+![Cluster](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/cluster.png =600x)
 
 ---
 

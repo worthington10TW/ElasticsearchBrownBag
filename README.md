@@ -1,7 +1,12 @@
-# [ElasticsearchBrownBag](https://hackmd.io/@cp5_EyqNRquj1sBvUfSGSg/S16Ds3ycv#/)
+# ElasticsearchBrownBag
 
 A set of interactive workshops exploring Elasticsearch
 
-See slide deck for more information. *Click header to open presentation*.
+## Week 1- Elasticsearch introduction 
 
+### [Deck](https://hackmd.io/@worthington10tw/S16Ds3ycv#/)
 
+- What is Elasticsearch
+- Glossary
+- Get some data into your own instance
+- How to view your data with Kibana
