@@ -34,8 +34,10 @@ services:
 
   loader:
     container_name: loader
-    build: 
-      context: DataLoader
+    image: ghcr.io/worthington10tw/data-loader:latest
+    # To build from source uncomment the below and comment out the above
+    # build: 
+    #   context: DataLoader
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     depends_on:

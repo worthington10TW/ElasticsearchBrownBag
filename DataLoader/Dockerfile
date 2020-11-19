@@ -17,5 +17,5 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 ENV ELASTICSEARCH_HOSTS="http://localhost:9200"
-RUN echo "Setting host to ${ELASTICSEARCH_HOSTS}"
+LABEL org.opencontainers.image.source https://github.com/worthington10TW/ElasticsearchBrownBag
 CMD ["sh", "-c", "echo ${ELASTICSEARCH_HOSTS} && dotnet DataLoader.dll $ELASTICSEARCH_HOSTS" ]
