@@ -73,7 +73,7 @@ Retrieves data
 
 [home (port 9200)](http://localhost:9200)
 
-![](https://i.imgur.com/Mu7cttv.png)
+![](./images/elasticsearch.png)
 
 ---
 
@@ -107,7 +107,7 @@ And can be reindexed and mapped
 
 # Document
 
-![](https://i.imgur.com/7AyGFvn.png =400x)
+![](./images/json.png =400x)
 
 ---
 
@@ -153,7 +153,7 @@ What about locations?
 
 # Document from ES
 
-![](https://i.imgur.com/RuhgV7x.png =400x)
+![](./images/document.png =400x)
 
 ---
 
@@ -166,7 +166,7 @@ The logical name which maps to one or more `shards`
 
 # Indexes
 
-![](https://i.imgur.com/e1tMW0L.png =400x)
+![](./images/index.png =400x)
 
 ---
 
@@ -191,7 +191,7 @@ An index alias of people containing teachers and pupils to the rescue!
 
 # Index alias
 
-![](https://i.imgur.com/nvd0VF9.png =400x)
+![](./images/index-alias.png =400x)
 
 ---
 
@@ -225,7 +225,7 @@ Machine Learning nodes
 Contains indexes
 Data nodes host the shards
 
-![](https://i.imgur.com/8DZeysP.png =400x)
+![](./images/nodes.png =400x)
 
 
 ---
@@ -259,7 +259,7 @@ Increased search performance
 
 # Shards
 
-![Shards](https://i.imgur.com/6vClMak.png =600x)
+![Shards](./images/shards.png =600x)
 
 ---
 
@@ -273,7 +273,7 @@ Nodes all share the same cluster name
 
 # Cluster
 
-![Cluster](https://i.imgur.com/oaD8B20.png =600x)
+![Cluster](./images/cluster.png =600x)
 
 ---
 
