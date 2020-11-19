@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NEST" Version="7.10.0" />
+    <PackageReference Include="Bogus" Version="31.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ProgrammingLanguages.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProgrammingLanguages.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
