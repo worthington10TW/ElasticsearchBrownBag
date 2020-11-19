@@ -105,8 +105,6 @@ And can be reindexed and mapped
 
 ---
 
-## Document
-
 ![document](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/json.png =400x)
 
 ---
@@ -215,7 +213,7 @@ Machine Learning nodes
 
 ---
 
-## Nodes
+### Data nodes
 
 Contains indexes
 Data nodes host the shards
