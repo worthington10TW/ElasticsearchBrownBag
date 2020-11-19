@@ -1,8 +1,8 @@
 # Introduction to Elasticsearch
 
-## Matthew Worthington
+Matthew Worthington
 
-## Developer @ ThoughtWorks
+Developer @ ThoughtWorks
 
 github.com
 /worthington10TW/ElasticsearchBrownBag
@@ -26,6 +26,8 @@ Note:
 
 ---
 
+### Week 1
+
 - Overview of Elasticsearch
 - Useful terminology
 - How to get up and running
@@ -45,7 +47,7 @@ Note:
 
 ## Our example data set
 
-ThoughtWorks university 
+Fictitious ThoughtWorks university
 Trainers and students
 
 ---
