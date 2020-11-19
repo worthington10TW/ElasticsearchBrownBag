@@ -18,7 +18,7 @@ namespace DataLoader
 
             var fakeTrainer = new Faker<Trainer>()
                 .StrictMode(true)
-                .RuleFor(t => t.Id, f => f.Random.String(5))
+                .RuleFor(t => t.Id, f => f.Commerce.Ean8())
                 .RuleFor(t => t.Name, f => f.Person.FullName)
                 .RuleFor(t => t.Bio, f => BioWithRandomLanguages(f, _programmingLangugages))
                 .RuleFor(t => t.Subjects, f => RandomLanguages(f, _programmingLangugages, 1, 10))
@@ -36,8 +36,8 @@ namespace DataLoader
 
         private static DateTime JoinDate(Faker f)
             => f.Date.Between(
-                        new DateTime(2015, 1, 1),
-                        new DateTime(2020, 11, 1));
+                        new DateTime(2019, 1, 1),
+                        new DateTime(2020, 11, 1)).Date;
 
         private static string[] RandomLanguages(Faker f, string[] lanugages, int start, int end)
             => f

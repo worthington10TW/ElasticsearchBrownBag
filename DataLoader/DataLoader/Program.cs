@@ -34,8 +34,8 @@ namespace DataLoader
             Console.WriteLine("Connecting to Elasticsearch");
             while (!indexer.IsAlive())
             {
-                Console.WriteLine("Could not connect to elastic, retrying in 5 seconds");
-                Thread.Sleep(new TimeSpan(0, 0, 5));
+                Console.WriteLine("Could not connect to elastic, retrying in 10 seconds");
+                Thread.Sleep(new TimeSpan(0, 0, 10));
             }
         }
     }
