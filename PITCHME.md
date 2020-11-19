@@ -39,9 +39,9 @@ Note:
 
 (If you want to code along)
 
-- Docker 
-- Bash (For windows machines see [git bash](https://gitforwindows.org/))
-- dotnet core in C# (If you want to dive into the code)
+- Docker
+- dotnet core (C#)
+  - If you want to dive into the code
 
 ---
 
