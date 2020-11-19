@@ -49,7 +49,7 @@ namespace DataLoader
             var text = f.Lorem.Paragraphs();
 
             foreach (var l in RandomLanguages(f, lanugages, 0, 5))
-                text = text.Insert(f.Random.Number(0, text.Length - 1), l);
+                text = text.Insert(f.Random.Number(0, text.Length - 1), $" {l} ");
 
             return text;
         }
