@@ -34,7 +34,7 @@ services:
 
   loader:
     container_name: loader
-    image: ghcr.io/worthington10tw/data-loader:latest
+    image: ghcr.io/worthington10tw/elasticsearchbrownbag-data-loader:latest
     # To build from source uncomment the below and comment out the above
     # build: 
     #   context: DataLoader
@@ -43,6 +43,16 @@ services:
     depends_on:
       - elasticsearch
 
+  configuration:
+    container_name: configuration
+    image: ghcr.io/worthington10tw/elasticsearchbrownbag-elastic-config:latest
+    # To build from source uncomment the below and comment out the above
+    # build: 
+    #   context: ElasticConfig
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
 volumes:
   elasticsearch-data:
     driver: local

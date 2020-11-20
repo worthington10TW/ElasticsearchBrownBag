@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  buildLoader:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -17,6 +17,19 @@ jobs:
         docker build DataLoader -t ghcr.io/worthington10tw/${IMAGE_NAME}:latest
         docker push ghcr.io/worthington10tw/${IMAGE_NAME}:latest
       env:
-        IMAGE_NAME: data-loader
+        IMAGE_NAME: elasticsearchbrownbag-data-loader
+        PAT: ${{ secrets.PAT }}
+        USERNAME: ${{ secrets.USERNAME }}
+  buildConfig:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: build, tag and push
+      run: |
+        echo $PAT | docker login ghcr.io -u $USERNAME --password-stdin
+        docker build ElasticConfig -t ghcr.io/worthington10tw/${IMAGE_NAME}:latest
+        docker push ghcr.io/worthington10tw/${IMAGE_NAME}:latest
+      env:
+        IMAGE_NAME: elasticsearchbrownbag-elastic-config
         PAT: ${{ secrets.PAT }}
         USERNAME: ${{ secrets.USERNAME }}
