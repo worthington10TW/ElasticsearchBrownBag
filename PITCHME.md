@@ -105,6 +105,8 @@ And can be reindexed and mapped
 
 ---
 
+## Documents JSON
+
 ![document](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/json.png =400x)
 
 ---
@@ -161,7 +163,7 @@ The logical name which maps to one or more `shards`
 
 ---
 
-![Indexes](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index.png =400x)
+![Indexes](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index.png =600x)
 
 ---
 
@@ -184,7 +186,7 @@ An index alias of people containing teachers and pupils to the rescue!
 
 ---
 
-![Index alias](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index-alias.png =400x)
+![Index alias](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index-alias.png =600x)
 
 ---
 
@@ -218,7 +220,7 @@ Machine Learning nodes
 Contains indexes
 Data nodes host the shards
 
-![Nodes](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/nodes.png =400x)
+![Nodes](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/nodes.png =600x)
 
 ---
 
