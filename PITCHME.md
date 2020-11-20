@@ -274,3 +274,12 @@ git clone github.com/worthington10TW/ElasticsearchBrownBag
 ```sh
 docker-compose up
 ```
+
+---
+
+## Next time
+
+- Creating an index alias
+- Continue creating queries
+- Create search templates
+- Compare results with Quepid
