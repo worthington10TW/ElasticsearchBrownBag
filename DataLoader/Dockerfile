@@ -18,4 +18,4 @@ COPY --from=publish /app/publish .
 
 ENV ELASTICSEARCH_HOSTS="http://localhost:9200"
 LABEL org.opencontainers.image.source https://github.com/worthington10TW/ElasticsearchBrownBag
-CMD ["sh", "-c", "echo ${ELASTICSEARCH_HOSTS} && dotnet DataLoader.dll $ELASTICSEARCH_HOSTS" ]
+CMD ["sh", "-c", "dotnet DataLoader.dll $ELASTICSEARCH_HOSTS" ]
