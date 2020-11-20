@@ -285,3 +285,10 @@ docker-compose up
 - Continue creating queries
 - Create search templates
 - Compare results with Quepid
+
+---
+
+## Thank you
+
+Send me some feedback
+mworthing@thoughtworks.com
