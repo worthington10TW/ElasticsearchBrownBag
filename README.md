@@ -35,8 +35,6 @@ The DataLoader is a dotnet core console application.
     - On failure sleep for 10 seconds and retry
 3. Generate 500 fake trainers
 4. Bulk index trainers into `trainer` index
-5. Close
-
-#### ToDo
-
-- Generate student test data
+5. Generate 10,000 fake stwudents
+6. Batch and Bulk index students into `student` index
+7. Close

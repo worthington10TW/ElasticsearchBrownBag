@@ -18,14 +18,22 @@ namespace DataLoader
 
             Console.WriteLine("Reading programming languages");
             var langugages = File.ReadAllLines("ProgrammingLanguages.txt");
-            var generator = new DataGenerator(langugages);
+            var generator = new PeopleGenerator(langugages);
 
             const int trainerCount = 500;
-            Console.WriteLine($"Generated {trainerCount}");
-            var data = generator.GenerateTrainers(trainerCount);
+            Console.WriteLine($"Generated {trainerCount} trainers");
+            var trainers = generator.GenerateTrainers(trainerCount);
+            Console.WriteLine($"Pumping trainers into Elasticsearch");
+            indexer.Index(trainers);
+            Console.WriteLine($"Trainers indexed");
 
-            Console.WriteLine($"Pumping data into Elasticsearch");
-            indexer.Index(data);
+            const int studentCount = 10000;
+            Console.WriteLine($"Generated {studentCount} students");
+            var students = generator.GenerateStudents(studentCount);
+            Console.WriteLine($"Pumping students into Elasticsearch");
+            indexer.Index(students);
+            Console.WriteLine($"Students indexed");
+
             Console.WriteLine($"Index complete, now start searching!");
         }
 

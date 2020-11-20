@@ -261,7 +261,7 @@ Nodes all share the same cluster name
 
 ---
 
-![Cluster](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/cluster.png =600x)
+![Cluster](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/cluster.png)
 
 ---
 

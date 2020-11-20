@@ -5,27 +5,47 @@ using Bogus;
 
 namespace DataLoader
 {
-    public class DataGenerator
+    public class PeopleGenerator
     {
         private readonly string[] _programmingLangugages;
+        private readonly DateTime[] _studentStartDates =
+            new []
+            {
+                new DateTime(2020, 1, 1),
+                new DateTime(2020, 4, 1),
+                new DateTime(2020, 7, 1),
+                new DateTime(2020, 10, 1) 
+            };
 
-        public DataGenerator(string[] programmingLanguages)
-            => _programmingLangugages = programmingLanguages;
-
-        public List<Trainer> GenerateTrainers(int amount)
+        public PeopleGenerator(string[] programmingLanguages)
         {
             Randomizer.Seed = new Random(8675309);
+            _programmingLangugages = programmingLanguages;
+        }
 
-            var fakeTrainer = new Faker<Trainer>()
+        public List<Trainer> GenerateTrainers(int amount) =>
+            new Faker<Trainer>()
                 .StrictMode(true)
                 .RuleFor(t => t.Id, f => f.Commerce.Ean8())
                 .RuleFor(t => t.Name, f => f.Person.FullName)
                 .RuleFor(t => t.Bio, f => BioWithRandomLanguages(f, _programmingLangugages))
                 .RuleFor(t => t.Subjects, f => RandomLanguages(f, _programmingLangugages, 1, 10))
                 .RuleFor(t => t.Interests, f => Interests(f, _programmingLangugages))
-                .RuleFor(t => t.JoinDate, f => JoinDate(f));
-            return fakeTrainer.GenerateForever().Take(amount).ToList();
-        }
+                .RuleFor(t => t.JoinDate, f => JoinDate(f))
+                .GenerateForever().Take(amount).ToList();
+
+        public List<Student> GenerateStudents(int amount) =>
+            new Faker<Student>()
+                .StrictMode(true)
+                .RuleFor(t => t.Id, f => f.Commerce.Ean8())
+                .RuleFor(t => t.Name, f => f.Person.FullName)
+                .RuleFor(t => t.Bio, f => BioWithRandomLanguages(f, _programmingLangugages))
+                .RuleFor(t => t.CanDoIt, f => RandomLanguages(f, _programmingLangugages, 1, 4))
+                .RuleFor(t => t.WantToLearn, f => RandomLanguages(f, _programmingLangugages, 1, 4))
+                .RuleFor(t => t.PracticedSome, f => RandomLanguages(f, _programmingLangugages, 1, 4))
+                .RuleFor(t => t.Interests, f => Interests(f, _programmingLangugages))
+                .RuleFor(t => t.JoinDate, f => f.PickRandom(_studentStartDates))
+                .GenerateForever().Take(amount).ToList();
 
         private static string[] Interests(Faker f, string[] lanugages)
             => f
