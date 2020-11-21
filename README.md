@@ -38,3 +38,23 @@ The DataLoader is a dotnet core console application.
 5. Generate 10,000 fake stwudents
 6. Batch and Bulk index students into `student` index
 7. Close
+
+### Quepid
+
+The first time using Quepid you will need to setup the database and your credentials.
+
+This is handled in the `init.sh` script.
+
+The script has an optional single argument from setting the email address.
+
+If this is not passed it will use your git credentials.
+
+The password is hardcoded to `superpassword`
+
+```sh
+./init.sh
+#Will create a user using $(git config user.email)
+
+./init.sh your@email.com
+#Will create a user using your@email.com
+```
