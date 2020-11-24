@@ -267,6 +267,57 @@ Nodes all share the same cluster name
 
 ---
 
+## Creating an index
+
+```curl
+PUT /trainer
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 3,  
+      "number_of_replicas": 2 
+    }
+  },
+  "mappings": {
+    "properties": {
+      "bio":    { "type": "text" },  
+      "subjects":  { "type": "keyword"  }, 
+      "name":   { "type": "text"  }     
+    }
+  }
+}
+```
+
+Note
+Index aliases 
+
+---
+
+## Adding document to an index
+
+```curl
+PUT trainer/_doc/1
+{
+  "user": {
+    "id": "elkbee"
+  }
+}
+```
+
+--
+
+## Adding many documents to an index
+
+```curl
+POST _bulk
+{ "index" : { "_index" : "trainer", "_id" : "1" } }
+{ "field1" : "value1" }
+{ "index" : { "_index" : "trainer", "_id" : "2" } }
+{ "field1" : "value2" }
+{ "index" : { "_index" : "trainer", "_id" : "2" } }
+{ "field1" : "value2" }
+```
+
 ## Time to play with Elasticsearch!
 
 ```sh
@@ -279,11 +330,36 @@ docker-compose up
 
 ---
 
+## The code
+
+//TODO image
+
+---
+
+## ES in docker
+
+//TODO image
+
+--
+
+## Data in ES
+
+//TODO image
+
+--
+
+## The datasets 
+
+//TODO image
+
+---
+
 ## Next time
 
 - Creating an index alias
 - Continue creating queries
 - Create search templates
+- Document mappings
 - Compare results with Quepid
 
 ---
