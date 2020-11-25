@@ -171,9 +171,9 @@ The logical name which maps to one or more `shards`
 ```curl
 PUT trainer/_doc/1
 {
-  "user": {
-    "id": "elkbee"
-  }
+  "Name": "Matthew",
+  "Subjects": ["C#", "Java", "Elasticsearch"]
+  ...
 }
 ```
 
@@ -350,13 +350,13 @@ docker-compose up
 
 ![StartES](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/start_es.png =600x)
 
---
+---
 
 ## Data in ES
 
 ![LoadData](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/load_data.png)
 
---
+---
 
 ## The trainers
 
