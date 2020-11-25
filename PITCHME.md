@@ -252,13 +252,17 @@ An index alias of people containing teachers and pupils to the rescue!
 ## Nodes you should know
 
 Data nodes
-Ingestion nodes
+Ingest nodes
 Master nodes
 Client nodes
 
 Note:
 Data nodes
     stores data and executes data-related operations such as search and aggregation
+Ingest nodes
+    (Default role).Apply an ingest pipeline to a document in order to transform and enrich the document before indexing. With a heavy ingest load, it makes sense to use dedicated ingest nodes and to not include the ingest role from nodes that have the master or data roles.
+    ETL
+    
 Master nodes
     in charge of cluster-wide management and configuration actions such as adding and removing nodes
 Client nodes
