@@ -358,9 +358,15 @@ docker-compose up
 
 --
 
-## The datasets
+## The trainers
 
-//TODO image
+![Trainer](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/trainer.png =600x)
+
+---
+
+## The students
+
+![Student](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/student.png =600x)
 
 ---
 
@@ -371,6 +377,8 @@ docker-compose up
 - Create search templates
 - Document mappings
 - Compare results with Quepid
+
+*Or, let me know what you would like to see*
 
 ---
 
