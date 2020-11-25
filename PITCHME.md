@@ -154,6 +154,9 @@ Some examples
 
 ![document](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/document.png =400x)
 
+Note:
+We have ingested without a mapping type, using Elastics dynamic mapping
+
 ---
 
 ## Indexes
@@ -163,7 +166,60 @@ The logical name which maps to one or more `shards`
 
 ---
 
+### Adding document to an index
+
+```curl
+PUT trainer/_doc/1
+{
+  "user": {
+    "id": "elkbee"
+  }
+}
+```
+
+---
+
+## Adding many documents to an index
+
+```curl
+POST _bulk
+{ "index" : { "_index" : "trainer", "_id" : "1" } }
+{ "field1" : "value1" }
+{ "index" : { "_index" : "trainer", "_id" : "2" } }
+{ "field1" : "value2" }
+{ "index" : { "_index" : "trainer", "_id" : "2" } }
+{ "field1" : "value2" }
+```
+
+---
+
 ![Indexes](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index.png =600x)
+
+---
+
+### Creating an index
+
+```curl
+PUT /trainer
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 3,  
+      "number_of_replicas": 2 
+    }
+  },
+  "mappings": {
+    "properties": {
+      "bio":    { "type": "text" },  
+      "subjects":  { "type": "keyword"  }, 
+      "name":   { "type": "text"  }     
+    }
+  }
+}
+```
+
+Note
+Index aliases
 
 ---
 
@@ -190,14 +246,12 @@ An index alias of people containing teachers and pupils to the rescue!
 
 ---
 
-## Node
+## Nodes you should know
 
 Data nodes
+Ingestion nodes
 Master nodes
 Client nodes
-Tribe nodes
-Ingestion nodes
-Machine learning nodes
 
 Note:
 Data nodes
@@ -206,10 +260,17 @@ Master nodes
     in charge of cluster-wide management and configuration actions such as adding and removing nodes
 Client nodes
     forwards cluster requests to the master node and data-related requests to data nodes
+
+---
+
+## Other nodes
+
+Tribe nodes
+Machine learning nodes
+
+Note:
 Tribe nodes
     act as a client node, performing read and write operations against all of the nodes in the cluster
-Ingestion nodes
-    for pre-processing documents before indexing
 Machine Learning nodes
     These are nodes available under Elastic’s Basic License that enable machine learning tasks. Machine learning nodes have xpack.ml.enabled and node.ml set to true.
 
@@ -267,57 +328,6 @@ Nodes all share the same cluster name
 
 ---
 
-## Creating an index
-
-```curl
-PUT /trainer
-{
-  "settings": {
-    "index": {
-      "number_of_shards": 3,  
-      "number_of_replicas": 2 
-    }
-  },
-  "mappings": {
-    "properties": {
-      "bio":    { "type": "text" },  
-      "subjects":  { "type": "keyword"  }, 
-      "name":   { "type": "text"  }     
-    }
-  }
-}
-```
-
-Note
-Index aliases 
-
----
-
-## Adding document to an index
-
-```curl
-PUT trainer/_doc/1
-{
-  "user": {
-    "id": "elkbee"
-  }
-}
-```
-
---
-
-## Adding many documents to an index
-
-```curl
-POST _bulk
-{ "index" : { "_index" : "trainer", "_id" : "1" } }
-{ "field1" : "value1" }
-{ "index" : { "_index" : "trainer", "_id" : "2" } }
-{ "field1" : "value2" }
-{ "index" : { "_index" : "trainer", "_id" : "2" } }
-{ "field1" : "value2" }
-```
-
 ## Time to play with Elasticsearch!
 
 ```sh
@@ -332,23 +342,23 @@ docker-compose up
 
 ## The code
 
-//TODO image
+![Github](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/github.png =600x)
 
 ---
 
 ## ES in docker
 
-//TODO image
+![StartES](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/start_es.png =600x)
 
 --
 
 ## Data in ES
 
-//TODO image
+![LoadData](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/loads_data.png =600x)
 
 --
 
-## The datasets 
+## The datasets
 
 //TODO image
 
