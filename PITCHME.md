@@ -218,7 +218,7 @@ PUT /trainer
 }
 ```
 
-Note
+Note:
 Index aliases
 
 ---
@@ -354,19 +354,19 @@ docker-compose up
 
 ## Data in ES
 
-![LoadData](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/loads_data.png =600x)
+![LoadData](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/load_data.png)
 
 --
 
 ## The trainers
 
-![Trainer](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/trainer.png =600x)
+![Trainer](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/trainer.png)
 
 ---
 
 ## The students
 
-![Student](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/student.png =600x)
+![Student](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/student.png)
 
 ---
 
