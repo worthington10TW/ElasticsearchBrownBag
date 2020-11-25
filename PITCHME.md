@@ -177,6 +177,9 @@ PUT trainer/_doc/1
 }
 ```
 
+Note: 
+To add a document to Elasticsearch we push it to an 'Index'
+
 ---
 
 ## Adding many documents to an index
@@ -193,7 +196,7 @@ POST _bulk
 
 ---
 
-![Indexes](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index.png =600x)
+![Indexes](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/index.png =400x)
 
 ---
 
@@ -366,7 +369,7 @@ docker-compose up
 
 ## The students
 
-![Student](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/student.png)
+![Student](https://raw.githubusercontent.com/worthington10TW/ElasticsearchBrownBag/main/images/student.png =400x)
 
 ---
 
