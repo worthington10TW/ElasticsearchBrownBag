@@ -377,6 +377,10 @@ docker-compose up
 
 ---
 
+# Demo
+
+---
+
 ## Next time
 
 - Creating an index alias
