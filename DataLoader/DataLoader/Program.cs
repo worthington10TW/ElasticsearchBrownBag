@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Threading;
 
 namespace DataLoader
@@ -20,19 +21,23 @@ namespace DataLoader
             var langugages = File.ReadAllLines("ProgrammingLanguages.txt");
             var generator = new PeopleGenerator(langugages);
 
-            const int trainerCount = 500;
+            const int trainerCount = 5000;
             Console.WriteLine($"Generated {trainerCount} trainers");
             var trainers = generator.GenerateTrainers(trainerCount);
             Console.WriteLine($"Pumping trainers into Elasticsearch");
             indexer.Index(trainers);
             Console.WriteLine($"Trainers indexed");
 
-            const int studentCount = 10000;
+            const int studentCount = 1000000;
             Console.WriteLine($"Generated {studentCount} students");
             var students = generator.GenerateStudents(studentCount);
             Console.WriteLine($"Pumping students into Elasticsearch");
             indexer.Index(students);
             Console.WriteLine($"Students indexed");
+
+            Console.WriteLine($"Adding new field to students into Elasticsearch");
+            indexer.IndexStudentWithNewField(students.Select(x => x.Id));
+            Console.WriteLine($"Students updated");
 
             Console.WriteLine($"Index complete, now start searching!");
         }

@@ -23,7 +23,7 @@ namespace DataLoader
             _programmingLangugages = programmingLanguages;
         }
 
-        public List<Trainer> GenerateTrainers(int amount) =>
+        public IEnumerable<Trainer> GenerateTrainers(int amount) =>
             new Faker<Trainer>()
                 .StrictMode(true)
                 .RuleFor(t => t.Id, f => f.Commerce.Ean8())
@@ -32,9 +32,9 @@ namespace DataLoader
                 .RuleFor(t => t.Subjects, f => RandomLanguages(f, _programmingLangugages, 1, 10))
                 .RuleFor(t => t.Interests, f => Interests(f, _programmingLangugages))
                 .RuleFor(t => t.JoinDate, f => JoinDate(f))
-                .GenerateForever().Take(amount).ToList();
+                .GenerateForever().Take(amount);
 
-        public List<Student> GenerateStudents(int amount) =>
+        public IEnumerable<Student> GenerateStudents(int amount) =>
             new Faker<Student>()
                 .StrictMode(true)
                 .RuleFor(t => t.Id, f => f.Commerce.Ean8())
@@ -45,7 +45,7 @@ namespace DataLoader
                 .RuleFor(t => t.PracticedSome, f => RandomLanguages(f, _programmingLangugages, 1, 4))
                 .RuleFor(t => t.Interests, f => Interests(f, _programmingLangugages))
                 .RuleFor(t => t.JoinDate, f => f.PickRandom(_studentStartDates))
-                .GenerateForever().Take(amount).ToList();
+                .GenerateForever().Take(amount);
 
         private static string[] Interests(Faker f, string[] lanugages)
             => f
