@@ -38,3 +38,4 @@ The DataLoader is a dotnet core console application.
 5. Generate 10,000 fake stwudents
 6. Batch and Bulk index students into `student` index
 7. Close
+.
